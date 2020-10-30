@@ -3,6 +3,7 @@ package ua.antibyte.model.dto;
 import lombok.Data;
 
 @Data
-public class CharacterInfoDto {
+public class PersonageInfoDto {
     private int count;
+    private int pages;
 }

@@ -3,7 +3,7 @@ package ua.antibyte.model.dto;
 import lombok.Data;
 
 @Data
-public class CharacterDto {
+public class PersonageResponseDto {
     private Long id;
     private String name;
     private String status;

@@ -17,6 +17,7 @@ import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 @Configuration
 @ComponentScan(basePackages = {
         "ua.antibyte.service",
+        "ua.antibyte.dao"
 })
 @PropertySource("classpath:application.properties")
 public class AppConfig {
@@ -45,6 +46,7 @@ public class AppConfig {
         properties.setProperty("hibernate.hbm2ddl.auto",
                 environment.getProperty("hibernate.hbm2ddl.auto"));
         sessionFactory.setHibernateProperties(properties);
+        sessionFactory.setPackagesToScan("ua.antibyte.model");
         return sessionFactory;
     }
 
